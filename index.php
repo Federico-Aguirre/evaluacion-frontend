@@ -77,23 +77,23 @@
     <form id="form" method="post">
     	<div>¡Inscríbete y reserva tu lugar ahora!</div>
     	<label id="form_guia_nombre" for="form_nombre">Nombre</label>
-		<input id="form_nombre" type="text" name="nombre" required>
+		<input type="text" name="nombre" required>
 
-		<label id="form_guia_apellido" for="form_apellido">Apellido</label>
-		<input id="form_apellido" type="text" name="apellido" required>
+		<label for="form_apellido">Apellido</label>
+		<input type="text" name="apellido" required>
 
-    	<label id="form_guia_email" for="form_email">Email</label>
-            <input id="form_email" type="email" name="email" required>
+    	<label for="form_email">Email</label>
+            <input  type="email" name="email" required>
 
-		<label id="form_guia_pais" for="form_pais">País</label>
+		<label for="form_pais">País</label>
 		<select id="form_pais" name="pais" required>
 			<option value="Argentina">Argentina</option>
 			<option value="Peru">Peru</option>
 			<option value="Brazil">Brazil</option>
 		</select>
 
-		<label id="form_guia_telefono" for="form_telefono">Telefono</label>
-        <input id="form_telefono" type="number" name="telefono" required>
+		<label for="form_telefono">Telefono</label>
+        <input type="number" name="telefono" required>
 
 		<label id="form_guia_trabajo" for="form_trabajo">Puesto de trabajo</label>
         <input id="form_trabajo" type="text" name="trabajo" required>
