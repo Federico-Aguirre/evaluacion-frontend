@@ -7,4 +7,7 @@ importe el archivo reg_usuario.sql dentro de la base de datos "registro"
 importe el archivo evaluacion-frontend dentro de la carpeata htdocs en xampp
 escriba en la url de su navegador: localhost/numero del puerto en su panel de control de xampp(suele ser 8080 una vez configurado xampp)/evaluacion-frontend
 
+asegurese de haber descargado correctamente la carpeta imagenes, en caso de no poder hacerlo, descomprima la carpeta imagenes.rar
+y guarde la carpeta imagenes dentro de la carpeta evaluacion-frontend 
+
 si necesita instrucciones para configurar xampp, no dude en contactarme
