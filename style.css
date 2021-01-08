@@ -50,29 +50,61 @@ del {
 }
 
 
+@-webkit-keyframes rotar {
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  20% {-webkit-transform: rotate(5deg);transform: rotate(5deg);}
+  40% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
+  60% {-webkit-transform: rotate(10deg);transform: rotate(10deg);}
+  80% {-webkit-transform: rotate(-5deg);transform: rotate(-5deg);}
+  100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}
+
+
 @keyframes rotar {
-  0% {transform: rotate(0deg);}
-  20% {transform: rotate(5deg);}
-  40% {transform: rotate(-10deg);}
-  60% {transform: rotate(10deg);}
-  80% {transform: rotate(-5deg);}
-  100% {transform: rotate(0deg);}
+  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  20% {-webkit-transform: rotate(5deg);transform: rotate(5deg);}
+  40% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
+  60% {-webkit-transform: rotate(10deg);transform: rotate(10deg);}
+  80% {-webkit-transform: rotate(-5deg);transform: rotate(-5deg);}
+  100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}
+
+@-webkit-keyframes mensaje {
+  0% {-webkit-transform : translateY(-2400%);transform : translateY(-2400%);}
+  3% {-webkit-transform : translateY(-3170%);transform : translateY(-3170%);}
+  80% {-webkit-transform : translateY(-3170%);transform : translateY(-3170%);}
+  100% {-webkit-transform : translateY(9999px);transform : translateY(9999px);}
 }
 
 @keyframes mensaje {
-  0% {transform : translateY(-2400%);}
-  3% {transform : translateY(-3170%);}
-  80% {transform : translateY(-3170%);}
-  100% {transform : translateY(9999px);}
+  0% {-webkit-transform : translateY(-2400%);transform : translateY(-2400%);}
+  3% {-webkit-transform : translateY(-3170%);transform : translateY(-3170%);}
+  80% {-webkit-transform : translateY(-3170%);transform : translateY(-3170%);}
+  100% {-webkit-transform : translateY(9999px);transform : translateY(9999px);}
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  to  {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes anim1 {
   from {
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   to  {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
@@ -106,7 +138,11 @@ body {
     height: 100%;
     grid-template-rows: repeat(33, 10%);
     grid-template-columns: repeat(10, 10%);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 #header {
@@ -137,7 +173,8 @@ body {
   font-family: "Sharp Sans No1 Bold";
   place-content: center;
   margin-top: 3%;
-  animation: anim1;
+  -webkit-animation: anim1;
+          animation: anim1;
 }
 
 #header_texto_1 div {
@@ -149,7 +186,8 @@ body {
   font-family: "Sharp Sans No1 Bold";
   font-weight: normal;
   font-size: 12px;
-  animation: anim1;
+  -webkit-animation: anim1;
+          animation: anim1;
 }
 
 #marcas {
@@ -232,7 +270,8 @@ body {
   grid-area: 2/1/2/12;
   font-size: clamp(1.1rem, 1.5vw, 2rem);
   margin: 0 10% 0 10%;
-  justify-content: start;
+  -webkit-box-pack: start;
+          justify-content: start;
   text-align: center;
 }
 
@@ -353,7 +392,8 @@ body {
 
 svg:hover {
   cursor: pointer;
-  animation: rotar 1.5s infinite;
+  -webkit-animation: rotar 1.5s infinite;
+          animation: rotar 1.5s infinite;
 }
 
 .error, #ok{
@@ -361,7 +401,8 @@ svg:hover {
   width: 50%;
   top: 4000px;
   text-align: center;
-  animation: mensaje ease-in-out 10s;
+  -webkit-animation: mensaje ease-in-out 10s;
+          animation: mensaje ease-in-out 10s;
   color: #ffffff;
   padding: 50px;
   border-radius: 4px;
@@ -477,4 +518,3 @@ svg:hover {
     margin-right: 125%;
   }
 }
-
